@@ -4,13 +4,13 @@ const sendMail = (email, fullName, password) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'mazononline.project@gmail.com',
+          user: 'ahsaf561@gmail.com',
           pass: process.env.MAILER_PASS
         }
       });
 
     const mailOptions = {
-        from: 'Mazon Online <mazononline.project@gmail.com>',
+        from: 'Mazon Online <ahsaf561@gmail.com>',
         to: email,
         subject: 'Mazon Online Password Reset',
         html: 

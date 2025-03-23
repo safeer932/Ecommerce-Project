@@ -1,7 +1,9 @@
+require('dotenv').config(); // Charge les variables de .env
+
 const { Sequelize, Model, DataTypes, Op } = require('sequelize');
 
 const sequelize = new Sequelize(
-    'shoppingOnline', 
+    process.env.DB_NAME, 
     process.env.DB_USER, 
     process.env.DB_PASS, 
     {
