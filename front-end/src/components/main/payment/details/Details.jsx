@@ -34,7 +34,7 @@ const Details = () => {
     useEffect(() => { // Fetch user shipping address
         (async () => {
             try {
-                const res = await axios.post('http://18.200.246.187/address', 
+                const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/address`, 
                 {token: localStorage.getItem('token')});
 
                 res.data.status === '200' && setUserDetails(res.data.data);
@@ -47,7 +47,7 @@ const Details = () => {
     useEffect(() => { // Fetch busy dates
         (async () => {
             try {
-                const res = await axios.get('http://18.200.246.187/dates');
+                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/dates`);
 
                 setDatesFull(res.data.data);
         } catch (err) {
@@ -78,7 +78,7 @@ const Details = () => {
 
     const sendOrder = async (obj) => { // Make an order function
         try {
-            const res = await axios.post('http://18.200.246.187/order',obj);
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/order`,obj);
 
             if (res.data.status === '200') {
                 setShippingInfo({city: obj.city, street: obj.street, deliveryDate: obj.deliveryDate});

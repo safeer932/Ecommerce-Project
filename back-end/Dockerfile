@@ -22,7 +22,7 @@ RUN npm install --legacy-peer-deps
 # Copier tout le code
 COPY . .
 
-# Exposer le port 3000
+# Exposer le port 3001 port du backend
 EXPOSE 3001
 
 # Lancer l'application

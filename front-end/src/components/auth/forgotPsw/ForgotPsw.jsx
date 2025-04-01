@@ -23,7 +23,7 @@ const ForgotPsw = () => {
     const resetPass = async (email) => { // Reset psw
         try {
             setSpinnerState(true);
-            await axios.put('http://18.200.246.187/session', {email: email});
+            await axios.put(`${process.env.REACT_APP_BACKEND_URL}/session`, { email });
             setSpinnerState(false);
             
             setEmailSent(true);

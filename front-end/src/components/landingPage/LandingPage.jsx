@@ -35,7 +35,7 @@ const LandingPage = () => {
     useEffect(() => { // Fetch app statistics
         (async () => {
             try {
-                const res = await axios.get('http://18.200.246.187/statistics');
+                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/statistics`);
 
                 setUsersCount(res.data.users);
                 setOrdersCount(res.data.orders);

@@ -57,11 +57,12 @@ for ingress in $ingresses_to_delete; do
     kubectl delete ingress $ingress
 done
 
+kubectl delete secret mailer-secret
 
 
 
 echo "Attente de 12 secondes..."
-sleep 12
+sleep 6
 
 echo "Vérification si tout a été supprimé :"
 kubectl get services

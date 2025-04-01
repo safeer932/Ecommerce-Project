@@ -16,9 +16,9 @@ const Main = () => {
     useEffect(() => { // Fetch cart
         (async () => {
             try {
-                const res = await axios.post('http://18.200.246.187/cart', 
-                {token: localStorage.getItem('token')});
-                
+                const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/cart`, {
+                token: localStorage.getItem('token')
+                });
                 if (res.data.status === '409') {
                     const totalPrice = () => {
                         let total = 0;

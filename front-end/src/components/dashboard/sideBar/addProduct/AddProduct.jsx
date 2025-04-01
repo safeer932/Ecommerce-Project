@@ -135,7 +135,7 @@ const AddProduct = () => {
     const addNewProduct = async (productName, category, price, img) => { // Fetch new product
         try {
             setSpinnerState(true);
-            const res = await axios.post('http://18.200.246.187/product', 
+	    const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/product`,
             {productName: productName, category: category, price: price, img: img});
             setSpinnerState(false);
             
@@ -156,7 +156,7 @@ const AddProduct = () => {
 
     const createCategory = async (productName, newCategory, price, img) => { // Fetch new category
         try {
-            const res = await axios.post('http://18.200.246.187/category', 
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/category`, 
             {newCategory: newCategory});
             setSpinnerState(false);
 

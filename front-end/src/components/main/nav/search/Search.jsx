@@ -21,7 +21,7 @@ const Search = () => {
 
     const searchHandler = async (productName) => { // Fetch product by searched name
         try {
-            const res = await axios.post('http://18.200.246.187/stock',
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/stock`,
             {productName: productName});
             
             if (Array.isArray(res.data.data) && res.data.data.length > 0) {
@@ -30,7 +30,7 @@ const Search = () => {
                 dispatch({type: 'SET_SEARCH_STATUS', searchStatus: {searchWord: searchInput.current.value, resultsNumber: res.data.data.length} });
             } else {
                 setSearchErrMsg(res.data.data);
-                setTimeout(() => { setSearchErrMsg('What are you looking for?'); }, 3000);
+                setTimeout(() => { setSearchErrMsg('What are you looking for?'); }, 80);
                 searchInput.current.value = '';
                 setIsBtn(true);
             }

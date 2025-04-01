@@ -16,7 +16,7 @@ const Cart = () => {
     useEffect(() => { // Fetch cart
         (async () => {
             try {
-                const res = await axios.post('http://18.200.246.187/cart',
+                const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/cart`,
                 {token: localStorage.getItem('token')});
 
                 const totalPrice = () => {

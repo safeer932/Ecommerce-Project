@@ -40,8 +40,10 @@ const LogIn = () => {
     const connectAcc = async (email, password) => { // Log in function
         try {
             setSpinnerState(true);
-            const res = await axios.post('http://18.200.246.187/session', 
-            {email: email, password: password});
+	    const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/session`, {
+            email: email,
+            password: password
+            });
             setSpinnerState(false);
 
             if (res.data.status === '200') {

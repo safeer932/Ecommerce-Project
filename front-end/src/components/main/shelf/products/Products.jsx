@@ -22,7 +22,7 @@ const Products = () => {
     useEffect(() => { // Fetch first category dynamically
         (async () => {
             try {
-                const res = await axios.get('http://18.200.246.187/category');
+                const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/category`);
 
                 setCategoryId(res.data.category.id);
             } catch (err) {
@@ -64,7 +64,7 @@ const Products = () => {
 
     const selectedProductHandler = async (obj) => { // Selected product
         try {
-            await axios.post('http://18.200.246.187/productCart', obj);
+            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/productCart`, obj);
 
             dispatch({type: 'SET_REFETCH_CART', refetchCart: Math.random() * 2 });
         } catch (err) {
@@ -74,7 +74,7 @@ const Products = () => {
 
     const incrementProductCart = async (productId, request) => { // Change product amount
         try {
-            await axios.put('http://18.200.246.187/productCart', 
+            await axios.put(`${process.env.REACT_APP_BACKEND_URL}/productCart`,
             {shoppingCartId: openCart, productId: productId, request: request});
 
             dispatch({type: 'SET_REFETCH_CART', refetchCart: Math.random() * 2 });

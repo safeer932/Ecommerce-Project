@@ -96,7 +96,7 @@ const EditProduct = () => {
     const editProduct = async () => { // Fetch product update
         try {
             setSpinnerState(true);
-            const res = await axios.put('http://18.200.246.187/product', obj);
+            const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/product`, obj);
 
             setSpinnerState(false);
 

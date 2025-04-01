@@ -22,8 +22,8 @@ RUN npm install --legacy-peer-deps
 # Copier tout le code
 COPY . .
 
-# Exposer le port 3000
-EXPOSE 3000
+# Exposer le port 80
+EXPOSE 80
 
 # Lancer l'application
 CMD ["npm", "start"]
