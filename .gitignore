@@ -1,5 +1,14 @@
-/home/sahmad/mazon-comerce-microservices-application/deployment/configmap-frontend.yml
-/home/sahmad/mazon-comerce-microservices-application/deployment/configmap.yml
-/home/sahmad/mazon-comerce-microservices-application/deployment/secret.yml
-/home/sahmad/mazon-comerce-microservices-application/back-end/mailer.js
-/home/sahmad/mazon-comerce-microservices-application/front-end/.env
+# Ignorer les fichiers sensibles dans deployment/
+deployment/configmap-frontend.yml
+deployment/configmap.yml
+deployment/secret.yml
+
+# Ignorer mailer.js dans le backend
+back-end/mailer.js
+
+# Ignorer le fichier .env dans le frontend et le backend
+back-end/.env
+front-end/.env
+
+# Ignorer les fichiers .DS_Store (macOS)
+*.DS_Store
