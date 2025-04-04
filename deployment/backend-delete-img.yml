@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Étape 1 : Vérifier les images docker disponibles
+echo "Liste des images disponibles :"
+docker images | grep -E "safeer932/backend.*latest|backend.*latest"
+
+# Étape 2 : Supprimer les images spécifiques si elles existent
+if docker images | grep -q "safeer932/backend.*latest"; then
+    echo "Suppression de l'image safeer932/backend:latest localement."
+    docker rmi safeer932/backend:latest
+else
+    echo "L'image safeer932/backend:latest n'existe pas localement."
+fi
+
+if docker images | grep -q "backend.*latest"; then
+    echo "Suppression de l'image backend:latest localement."
+    docker rmi backend:latest
+else
+    echo "L'image backend:latest n'existe pas localement."
+fi
+
+
+echo "Script terminé."
+

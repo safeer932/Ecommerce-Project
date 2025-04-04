@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[transfer]
+	bundleURI = true
+[http "https://gitlab.com"]
+	sslCAInfo = /home/sahmad/mazon-comerce-microservices-application/builds/t3_QJ3Z5D/0/devops_project_for_cdi_alternance_only_projects_for_work/mazon-comerce-microservices-application.tmp/CI_SERVER_TLS_CA_FILE

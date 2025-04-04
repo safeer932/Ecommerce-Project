@@ -1,0 +1,5 @@
+/home/sahmad/mazon-comerce-microservices-application/deployment/configmap-frontend.yml
+/home/sahmad/mazon-comerce-microservices-application/deployment/configmap.yml
+/home/sahmad/mazon-comerce-microservices-application/deployment/secret.yml
+/home/sahmad/mazon-comerce-microservices-application/back-end/mailer.js
+/home/sahmad/mazon-comerce-microservices-application/front-end/.env

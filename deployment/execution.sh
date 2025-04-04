@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Liste des fichiers YAML à appliquer dans l'ordre spécifié
+yml_files=("secret.yml" "configmap.yml" "deployment-backend.yml" "service-backend.yml" "deployment-app.yml" "service-app.yml")
+
+# Appliquer chaque fichier YML dans l'ordre
+for file in "${yml_files[@]}"; do
+    echo "Applying $file..."
+    kubectl apply -f "$file"
+done
+
+

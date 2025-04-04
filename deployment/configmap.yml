@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  DB_HOST: "63.34.12.80"             #bdd externe ip
+  DB_USER: "admin"
+  DB_PASS: "MonSuperMotDePasse123!"
+  DB_NAME: "shoppingonline"
