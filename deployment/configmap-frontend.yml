@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: frontend-config
-data:
-  REACT_APP_BACKEND_URL: "http://130.211.97.35:3001"      #mettre lip du lb du pod du backend 
-
